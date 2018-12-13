@@ -62,11 +62,11 @@ module Brcobranca
         end
 
         def versao_layout_arquivo
-          '050'
+          '101'
         end
 
         def versao_layout_lote
-          '030'
+          '060'
         end
 
         def codigo_convenio

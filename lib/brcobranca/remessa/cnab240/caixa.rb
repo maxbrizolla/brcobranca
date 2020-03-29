@@ -141,6 +141,8 @@ module Brcobranca
           if pagamento.data_multa == '000000'
             data_multa = pagamento.data_vencimento + 1
             data_multa.strftime('%d%m%Y')
+          else
+            data_multa = pagamento.data_multa
           end
         end
 
@@ -159,6 +161,8 @@ module Brcobranca
           if pagamento.data_mora == ''
             data_mora = pagamento.data_vencimento + 1
             data_mora.strftime("%d%m%Y")
+          else
+            data_mora = pagamento.data_mora
           end
         end
       end

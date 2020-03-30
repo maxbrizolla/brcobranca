@@ -138,7 +138,12 @@ module Brcobranca
 
         def data_multa(pagamento)
           return ''.rjust(8, '0') if pagamento.codigo_multa == '0'
-          pagamento.data_multa.strftime('%d%m%y')
+          puts pagamento.data_multa
+          data_multa = Date.strptime(pagamento.data_multa, '%d%m%y')
+          puts data_multa
+          data_multa.strftime('%d%m%Y')
+
+          #pagamento.data_multa.strftime('%d%m%Y')
           # if pagamento.data_multa == '000000'
           #   data_multa = pagamento.data_vencimento + 1
           #   data_multa.strftime('%d%m%Y')
